@@ -22,6 +22,7 @@
 		7FB28E37197E01EC0021523F /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FB28E36197E01EC0021523F /* CoreImage.framework */; };
 		7FB28E3A197E02200021523F /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB28E39197E02200021523F /* ListViewController.m */; };
 		7FB28E3D197E0DE50021523F /* MyLengthyOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB28E3C197E0DE50021523F /* MyLengthyOperation.m */; };
+		7FB28E40197E2D880021523F /* MyUnnecesaryOperationQueueSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB28E3F197E2D880021523F /* MyUnnecesaryOperationQueueSubclass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		7FB28E39197E02200021523F /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		7FB28E3B197E0DE50021523F /* MyLengthyOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLengthyOperation.h; sourceTree = "<group>"; };
 		7FB28E3C197E0DE50021523F /* MyLengthyOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLengthyOperation.m; sourceTree = "<group>"; };
+		7FB28E3E197E2D880021523F /* MyUnnecesaryOperationQueueSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyUnnecesaryOperationQueueSubclass.h; sourceTree = "<group>"; };
+		7FB28E3F197E2D880021523F /* MyUnnecesaryOperationQueueSubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyUnnecesaryOperationQueueSubclass.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +128,8 @@
 				7FB28E39197E02200021523F /* ListViewController.m */,
 				7FB28E3B197E0DE50021523F /* MyLengthyOperation.h */,
 				7FB28E3C197E0DE50021523F /* MyLengthyOperation.m */,
+				7FB28E3E197E2D880021523F /* MyUnnecesaryOperationQueueSubclass.h */,
+				7FB28E3F197E2D880021523F /* MyUnnecesaryOperationQueueSubclass.m */,
 			);
 			path = ClassicPhotos;
 			sourceTree = "<group>";
@@ -256,6 +261,7 @@
 				7FB28E18197E019A0021523F /* AppDelegate.m in Sources */,
 				7FB28E3D197E0DE50021523F /* MyLengthyOperation.m in Sources */,
 				7FB28E14197E019A0021523F /* main.m in Sources */,
+				7FB28E40197E2D880021523F /* MyUnnecesaryOperationQueueSubclass.m in Sources */,
 				7FB28E3A197E02200021523F /* ListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
