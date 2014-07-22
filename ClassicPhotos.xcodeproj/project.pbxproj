@@ -24,6 +24,7 @@
 		7FB28E3D197E0DE50021523F /* MyLengthyOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB28E3C197E0DE50021523F /* MyLengthyOperation.m */; };
 		7FB28E40197E2D880021523F /* MyUnnecesaryOperationQueueSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB28E3F197E2D880021523F /* MyUnnecesaryOperationQueueSubclass.m */; };
 		7FB28E43197E37FF0021523F /* PhotoRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB28E42197E37FF0021523F /* PhotoRecord.m */; };
+		7FB28E46197E39730021523F /* PendingOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB28E45197E39730021523F /* PendingOperations.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		7FB28E3F197E2D880021523F /* MyUnnecesaryOperationQueueSubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyUnnecesaryOperationQueueSubclass.m; sourceTree = "<group>"; };
 		7FB28E41197E37FF0021523F /* PhotoRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoRecord.h; sourceTree = "<group>"; };
 		7FB28E42197E37FF0021523F /* PhotoRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoRecord.m; sourceTree = "<group>"; };
+		7FB28E44197E39730021523F /* PendingOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PendingOperations.h; sourceTree = "<group>"; };
+		7FB28E45197E39730021523F /* PendingOperations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PendingOperations.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +134,8 @@
 				7FB28E39197E02200021523F /* ListViewController.m */,
 				7FB28E41197E37FF0021523F /* PhotoRecord.h */,
 				7FB28E42197E37FF0021523F /* PhotoRecord.m */,
+				7FB28E44197E39730021523F /* PendingOperations.h */,
+				7FB28E45197E39730021523F /* PendingOperations.m */,
 				7FB28E3B197E0DE50021523F /* MyLengthyOperation.h */,
 				7FB28E3C197E0DE50021523F /* MyLengthyOperation.m */,
 				7FB28E3E197E2D880021523F /* MyUnnecesaryOperationQueueSubclass.h */,
@@ -265,6 +270,7 @@
 			files = (
 				7FB28E18197E019A0021523F /* AppDelegate.m in Sources */,
 				7FB28E43197E37FF0021523F /* PhotoRecord.m in Sources */,
+				7FB28E46197E39730021523F /* PendingOperations.m in Sources */,
 				7FB28E3D197E0DE50021523F /* MyLengthyOperation.m in Sources */,
 				7FB28E14197E019A0021523F /* main.m in Sources */,
 				7FB28E40197E2D880021523F /* MyUnnecesaryOperationQueueSubclass.m in Sources */,
