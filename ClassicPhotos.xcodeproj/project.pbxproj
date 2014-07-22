@@ -25,6 +25,8 @@
 		7FB28E40197E2D880021523F /* MyUnnecesaryOperationQueueSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB28E3F197E2D880021523F /* MyUnnecesaryOperationQueueSubclass.m */; };
 		7FB28E43197E37FF0021523F /* PhotoRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB28E42197E37FF0021523F /* PhotoRecord.m */; };
 		7FB28E46197E39730021523F /* PendingOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB28E45197E39730021523F /* PendingOperations.m */; };
+		7FB28E49197E3CCA0021523F /* ImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB28E48197E3CCA0021523F /* ImageDownloader.m */; };
+		7FB28E4C197F155B0021523F /* ImageFiltration.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB28E4B197F155B0021523F /* ImageFiltration.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,10 @@
 		7FB28E42197E37FF0021523F /* PhotoRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoRecord.m; sourceTree = "<group>"; };
 		7FB28E44197E39730021523F /* PendingOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PendingOperations.h; sourceTree = "<group>"; };
 		7FB28E45197E39730021523F /* PendingOperations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PendingOperations.m; sourceTree = "<group>"; };
+		7FB28E47197E3CCA0021523F /* ImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDownloader.h; sourceTree = "<group>"; };
+		7FB28E48197E3CCA0021523F /* ImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDownloader.m; sourceTree = "<group>"; };
+		7FB28E4A197F155B0021523F /* ImageFiltration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageFiltration.h; sourceTree = "<group>"; };
+		7FB28E4B197F155B0021523F /* ImageFiltration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageFiltration.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +142,10 @@
 				7FB28E42197E37FF0021523F /* PhotoRecord.m */,
 				7FB28E44197E39730021523F /* PendingOperations.h */,
 				7FB28E45197E39730021523F /* PendingOperations.m */,
+				7FB28E47197E3CCA0021523F /* ImageDownloader.h */,
+				7FB28E48197E3CCA0021523F /* ImageDownloader.m */,
+				7FB28E4A197F155B0021523F /* ImageFiltration.h */,
+				7FB28E4B197F155B0021523F /* ImageFiltration.m */,
 				7FB28E3B197E0DE50021523F /* MyLengthyOperation.h */,
 				7FB28E3C197E0DE50021523F /* MyLengthyOperation.m */,
 				7FB28E3E197E2D880021523F /* MyUnnecesaryOperationQueueSubclass.h */,
@@ -268,12 +278,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FB28E4C197F155B0021523F /* ImageFiltration.m in Sources */,
 				7FB28E18197E019A0021523F /* AppDelegate.m in Sources */,
 				7FB28E43197E37FF0021523F /* PhotoRecord.m in Sources */,
 				7FB28E46197E39730021523F /* PendingOperations.m in Sources */,
 				7FB28E3D197E0DE50021523F /* MyLengthyOperation.m in Sources */,
 				7FB28E14197E019A0021523F /* main.m in Sources */,
 				7FB28E40197E2D880021523F /* MyUnnecesaryOperationQueueSubclass.m in Sources */,
+				7FB28E49197E3CCA0021523F /* ImageDownloader.m in Sources */,
 				7FB28E3A197E02200021523F /* ListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
