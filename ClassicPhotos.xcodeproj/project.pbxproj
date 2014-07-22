@@ -21,6 +21,7 @@
 		7FB28E2D197E019B0021523F /* ClassicPhotosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB28E2C197E019B0021523F /* ClassicPhotosTests.m */; };
 		7FB28E37197E01EC0021523F /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FB28E36197E01EC0021523F /* CoreImage.framework */; };
 		7FB28E3A197E02200021523F /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB28E39197E02200021523F /* ListViewController.m */; };
+		7FB28E3D197E0DE50021523F /* MyLengthyOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB28E3C197E0DE50021523F /* MyLengthyOperation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		7FB28E36197E01EC0021523F /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		7FB28E38197E02200021523F /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
 		7FB28E39197E02200021523F /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		7FB28E3B197E0DE50021523F /* MyLengthyOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLengthyOperation.h; sourceTree = "<group>"; };
+		7FB28E3C197E0DE50021523F /* MyLengthyOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLengthyOperation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,8 @@
 				7FB28E0E197E01990021523F /* Supporting Files */,
 				7FB28E38197E02200021523F /* ListViewController.h */,
 				7FB28E39197E02200021523F /* ListViewController.m */,
+				7FB28E3B197E0DE50021523F /* MyLengthyOperation.h */,
+				7FB28E3C197E0DE50021523F /* MyLengthyOperation.m */,
 			);
 			path = ClassicPhotos;
 			sourceTree = "<group>";
@@ -249,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FB28E18197E019A0021523F /* AppDelegate.m in Sources */,
+				7FB28E3D197E0DE50021523F /* MyLengthyOperation.m in Sources */,
 				7FB28E14197E019A0021523F /* main.m in Sources */,
 				7FB28E3A197E02200021523F /* ListViewController.m in Sources */,
 			);
