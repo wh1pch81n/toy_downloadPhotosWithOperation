@@ -15,6 +15,13 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    
+    ListViewController *lvc = [[ListViewController alloc] initWithStyle:UITableViewStylePlain];
+    UINavigationController *navControl = [[UINavigationController alloc] initWithRootViewController:lvc];
+    
+    self.window.rootViewController = navControl;
+    
     [self.window makeKeyAndVisible];
     return YES;
 }
