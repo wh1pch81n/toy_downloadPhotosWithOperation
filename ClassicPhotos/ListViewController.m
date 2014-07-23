@@ -113,6 +113,7 @@
 
 - (void)didReceiveMemoryWarning
 {
+    [self cancelAllOperations];
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
@@ -161,8 +162,11 @@
         [((UIActivityIndicatorView *)cell.accessoryView) startAnimating];
         cell.imageView.image = [UIImage imageNamed:@"Placeholder.png"];
         cell.textLabel.text = @"";
-        [self startOperationsForPhotoRecord:aRecord atIndexPath:indexPath];
-    
+        
+        //start operations only if the tableview is not scrolling
+        if (tableView.dragging == NO && tableView.decelerating == NO) {
+            [self startOperationsForPhotoRecord:aRecord atIndexPath:indexPath];
+        }
     }
     return cell;
 }
@@ -222,6 +226,81 @@
     NSIndexPath *indexPath = filtration.indexPathInTableView;
     [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
     [self.pendingOperations.filtrationsInProgress removeObjectForKey:indexPath];
+}
+
+#pragma mark - UIScrollView delegate
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    [self suspendAllOperations];
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    if (decelerate == NO) {
+        [self loadImagesForOnscreenCells];
+        [self resumeAllOperations];
+    }
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    [self loadImagesForOnscreenCells];
+    [self resumeAllOperations];
+}
+
+#pragma mark - Cancelling, suspending, resuming queues / operations
+
+- (void)suspendAllOperations {
+    [self.pendingOperations.downloadQueue setSuspended:YES];
+    [self.pendingOperations.filtrationQueue setSuspended:YES];
+}
+
+- (void)resumeAllOperations {
+    [self.pendingOperations.downloadQueue setSuspended:NO];
+    [self.pendingOperations.filtrationQueue setSuspended:NO];
+}
+
+- (void)cancelAllOperations {
+    [self.pendingOperations.downloadQueue cancelAllOperations];
+    [self.pendingOperations.filtrationQueue cancelAllOperations];
+}
+
+- (void)loadImagesForOnscreenCells {
+    
+    // 1
+    NSSet *visibleRows = [NSSet setWithArray:[self.tableView indexPathsForVisibleRows]];
+    
+    // 2
+    NSMutableSet *pendingOperations = [NSMutableSet setWithArray:[self.pendingOperations.downloadsInProgress allKeys]];
+    [pendingOperations addObjectsFromArray:[self.pendingOperations.filtrationsInProgress allKeys]];
+    
+    NSMutableSet *toBeCancelled = [pendingOperations mutableCopy];
+    NSMutableSet *toBeStarted = [visibleRows mutableCopy];
+    
+    // 3
+    [toBeStarted minusSet:pendingOperations];
+    // 4
+    [toBeCancelled minusSet:visibleRows];
+    
+    // 5
+    for (NSIndexPath *anIndexPath in toBeCancelled) {
+        
+        ImageDownloader *pendingDownload = [self.pendingOperations.downloadsInProgress objectForKey:anIndexPath];
+        [pendingDownload cancel];
+        [self.pendingOperations.downloadsInProgress removeObjectForKey:anIndexPath];
+        
+        ImageFiltration *pendingFiltration = [self.pendingOperations.filtrationsInProgress objectForKey:anIndexPath];
+        [pendingFiltration cancel];
+        [self.pendingOperations.filtrationsInProgress removeObjectForKey:anIndexPath];
+    }
+    toBeCancelled = nil;
+    
+    // 6
+    for (NSIndexPath *anIndexPath in toBeStarted) {
+        
+        PhotoRecord *recordToProcess = [self.photos objectAtIndex:anIndexPath.row];
+        [self startOperationsForPhotoRecord:recordToProcess atIndexPath:anIndexPath];
+    }
+    toBeStarted = nil;
+    
 }
 
 @end
