@@ -167,22 +167,6 @@
     return cell;
 }
 
-#pragma mark - image filtration
-
-- (UIImage *)applySepiaFilterToImage:(UIImage *)image {
-    CIImage *inputImage = [CIImage imageWithData:UIImagePNGRepresentation(image)];
-    UIImage *sepiaImage;
-    CIContext *context = [CIContext contextWithOptions:nil];
-    CIFilter *filter = [CIFilter filterWithName:@"CISepiaTone" keysAndValues:kCIInputImageKey, inputImage, @"inputIntensity", [NSNumber numberWithFloat:0.8], nil];
-    
-    CIImage *outputImage = [filter outputImage];
-    CGImageRef outputImageRef = [context createCGImage:outputImage fromRect:[outputImage extent]];
-    sepiaImage = [UIImage imageWithCGImage:outputImageRef];
-    CGImageRelease(outputImageRef);
-    return sepiaImage;
-}
-
-
 #pragma mark - operations
 
 - (void)startOperationsForPhotoRecord:(PhotoRecord *)record atIndexPath:(NSIndexPath *)indexPath {

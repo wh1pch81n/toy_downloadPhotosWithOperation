@@ -32,7 +32,7 @@
     @autoreleasepool {
         if([self isCancelled]) return;
         
-        if ([[self photoRecord] hasImage]) {
+        if (![[self photoRecord] hasImage]) {
             return;
         }
         
